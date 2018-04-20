@@ -19,7 +19,7 @@ class App extends Component {
         </header>
         {this.state.users && (
             <h1 className="App-title">
-              Welcome {this.state.users.username}!
+              Welcome {this.state.users}!
             </h1>
           )}
       </div>

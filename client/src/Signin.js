@@ -46,8 +46,8 @@ class Signin extends React.Component {
     axios
       .post("http://localhost:5000/api/login", this.state)
       .then(response => {
-        console.log("response", response.data);
-        this.props.onSignin(response.data);
+        console.log("response", response.data.token);
+        this.props.onSignin({token: response.data.token, user: this.state.username});
         // this.props.history.push("/users");
       })
       .catch(err => {
